@@ -29,5 +29,19 @@ function lab1() {
 
 
 function isBelong(sequence) {
-  return /^[ac]*[01]+$/.test(sequence);
+    if (/^(10)*(01)+$/.test(sequence)) {
+        let counter_01 = 0;
+        let counter_10 = 0;
+
+        let seq_arr = sequence.split('');
+        for (let i = 0; i < seq_arr.length-1; i+=2) {
+            if ((seq_arr[i] + seq_arr[i+1]) == '01')
+                counter_01++;
+            if ((seq_arr[i] + seq_arr[i+1]) == '10') 
+                counter_10++; 
+        }
+        if ((counter_10 + 2) == counter_01)
+            return true;
+    }
+    return false;
 }
