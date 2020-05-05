@@ -1,3 +1,10 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+}
+
 #sequence__input {
     margin-bottom: 10px;
 }
@@ -13,4 +20,10 @@ footer {
     position: relative;
     text-align: center;
     
+}
+
+.menu {
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
