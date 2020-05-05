@@ -113,6 +113,7 @@ function state_L(result, inp_seq) {
 function display(result) {
     let answ = result
     let p_alert;
+    let p_state;
     let message;
 
     if (document.getElementById('form__alert') == null)
@@ -123,19 +124,31 @@ function display(result) {
         document.getElementById('sequence__input').after(p);
     }
 
+    if (document.getElementById('form__warning') == null) 
+    {
+        let p = document.createElement("p");
+        p.className = "form__alert alert alert-info";
+        p.id = "form__warning";
+        document.getElementById('form__alert').after(p);
+    }
+
     p_alert = document.getElementById("form__alert");
+    p_state = document.getElementById("form__warning");
+
     if (answ)
     {
-        message = "Цепочка принадлежит языку <br> Состояние " + g_message;
+        message = "Цепочка принадлежит языку";
         p_alert.className = "form__alert alert alert-success";
+        
     }
     else
     {
-        message = "Цепочка не принадлежит языку <br> Состояние " + g_message;
+        message = "Цепочка не принадлежит языку";
         p_alert.className = "form__alert alert alert-danger";
     }
 
     p_alert.innerHTML = message;
+    p_state.innerHTML = "Состояние " + g_message;
 }
 
 function do_it() {
