@@ -8,22 +8,29 @@
   </head>
   <body>
     <div class="menu">
-      <a href="../index.html" class="btn btn-primary">Меню</a>
+        <a href="lab2-menu.html" class="btn btn-primary">Назад</a>
+        <a href="../index.html" class="btn btn-primary">Меню</a>
     </div>
-    <div class="container">
-      <h2>Теория автоматов и формальных языков</h2>
-      <h3>Лабораторная работа 2</h3>
-      <h3>Программное средство №1</h3>
-      <h4>Вариант 7</h4>
-      
-      
-      <br>
-      <form>
+    <div class="container ">
+        <h2>Теория автоматов и формальных языков</h2>
+        <h3>Лабораторная работа 2</h3>
+        <h3>Программное средство №1</h3>
+        <h4>Вариант 7</h4>
+        <h5>Грамматика:</h5>
+        <h6>G = ({X, Y, Z, V, W}, {0, 1, x, y, z}, P, X)</h6>
+        <h6>P:</h6>
+        <h6>X &#8594; yY | zZ</h6>
+        <h6>Y &#8594; 1V</h6>
+        <h6>Z &#8594; 0W | 0Y</h6>
+        <h6>V &#8594; xZ | xW | 1</h6>
+        <h6>W &#8594; 1Y | 0</h6>
+        <br>
+        <form>
         <div class="form-group">
-          <label for="sequence__input">Введите цепочку:</label>
-          <input class="form-control" id="sequence__input" type="text" onkeyup="do_it()">
+            <label for="sequence__input">Введите цепочку:</label>
+            <input class="form-control" id="sequence__input" type="text" onkeyup="do_it()">
         </div>
-      </form>
+        </form>
     </div>
     <footer>
       <div class="footer__content">
