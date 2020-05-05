@@ -1,5 +1,5 @@
 let g_result = false;
-let g_message = ""
+let g_message = "";
 
 
 function state_Q(result, inp_seq) {
